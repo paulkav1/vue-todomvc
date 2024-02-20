@@ -16,6 +16,7 @@ let todos = [{
     complete: false
 }];
 
+
 /**
  * All Vue applications are initialized with a `new Vue()` method call. The object that is passed to the method call is the configuration for our whole application.
  */
