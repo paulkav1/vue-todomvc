@@ -1,21 +1,18 @@
 /**
- * Vue TODOMVC Application
- * Author : Daniel Stern
- * Free to use and modify without attribution.
+ * First Vue app
  **/
 
-/**
- * The todos are the "model" of this application. In a real-world example, they would probably be loaded asynchronously, though they could also be injected via server-side rendering.
- * Changing these todos will change their appearance in the application.
- */
 let todos = [{
-    name:"Debug UI",
+    name:"Attend standup",
     complete: false,
 },{
-    name:"Refactor build step",
+    name:"Play with cat",
     complete: true
 },{
-    name: "Upgrade Component",
+    name:"Walk dog",
+    complete: true
+},{
+    name: "Cook dinner",
     complete: false
 }];
 
@@ -70,11 +67,6 @@ new Vue({
         }
     },
 
-    /**
-     * The methods property of a Vue app contains functions, which are usually called from the template, though they can be called from elsewhere in the script, too.
-     * If you look in the template, you will find a form which calls this "addTodo()" method.
-     * Methods are the preferred way of doing an action that changes the data model.
-     */
     methods:{
         /**
          * addTodo() takes whatever is in the text input box, and makes it into a list element. There is no need to call a `render()` method, as Vue can determine on its own what to redraw.
@@ -85,9 +77,6 @@ new Vue({
                 complete:false
             });
 
-            /**
-             * Vue components can access their own properties through the "this" special keyword.
-             */
             this.text = ``;
         },
     }
